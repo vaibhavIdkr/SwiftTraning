@@ -10,7 +10,7 @@ import UIKit
 
 class TaskListViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate
 {
-    var selectedTaskCallback : ((String) -> ())?
+    var selectedTaskCallback : ((_ task: String) -> ())?
     let cellIdentifier = "defaultCell"
     let dataStore = TasksDataSource ()
     
@@ -20,12 +20,16 @@ class TaskListViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let defaultCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! UITableViewCell
+        var defaultCell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        
+        if(defaultCell == nil){
+            defaultCell = UITableViewCell (style: UITableViewCellStyle.default, reuseIdentifier: cellIdentifier)
+        }
         
         let task = dataStore.allTasks()[indexPath.row]
-        defaultCell.textLabel?.text = task
+        defaultCell!.textLabel!.text = task
         
-        return defaultCell
+        return defaultCell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
