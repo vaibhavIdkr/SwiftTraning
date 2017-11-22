@@ -12,8 +12,21 @@ class ToDoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Task Listing"
+        
+        self.configureNavigationToolBar()
     }
 
+    func configureNavigationToolBar(){
+        
+        let addBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector (pushAddTaskViewController))
+        
+        self.navigationController?.navigationItem.backBarButtonItem?.title = "<"
+        self.navigationController?.navigationItem.rightBarButtonItem = addBarButton
+    }
     
-
+    @objc func pushAddTaskViewController(){
+        
+    }
 }

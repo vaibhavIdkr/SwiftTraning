@@ -74,6 +74,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		4670A7E41FC5DF7300D2ABE5 /* TableVIewDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */,
+			);
+			path = TableVIewDataSources;
+			sourceTree = "<group>";
+		};
 		468218D61FC32CC4008F9EFF = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +103,9 @@
 		468218E11FC32CC4008F9EFF /* SwiftTraning */ = {
 			isa = PBXGroup;
 			children = (
+				4670A7E41FC5DF7300D2ABE5 /* TableVIewDataSources */,
 				24E331231FC42591004BC27F /* View Controllers */,
 				468218E21FC32CC4008F9EFF /* AppDelegate.swift */,
-				24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */,
 				468218E61FC32CC4008F9EFF /* Main.storyboard */,
 				468218EC1FC32CC4008F9EFF /* Assets.xcassets */,
 				468218EE1FC32CC4008F9EFF /* LaunchScreen.storyboard */,

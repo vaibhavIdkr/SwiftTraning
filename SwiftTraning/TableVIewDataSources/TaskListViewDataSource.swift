@@ -28,6 +28,7 @@ class TaskListViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate
         
         let task = dataStore.allTasks()[indexPath.row]
         defaultCell!.textLabel!.text = task
+        defaultCell?.selectionStyle = UITableViewCellSelectionStyle.none
         
         return defaultCell!
     }

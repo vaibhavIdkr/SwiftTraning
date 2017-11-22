@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task To Do-->
+        <!--Traning List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftTraning" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,11 +36,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Task To Do" id="7jb-d8-DgC">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="uHx-BP-xRM">
-                            <color key="tintColor" red="1" green="0.086274509803921567" blue="0.32941176470588235" alpha="0.80001100352112675" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Traning List" id="7jb-d8-DgC"/>
                     <connections>
                         <outlet property="tasksListView" destination="PNS-R1-6V5" id="ZLO-L8-3b6"/>
                     </connections>
@@ -57,13 +53,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbj-BY-kzJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbj-BY-kzJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tbj-BY-kzJ" firstAttribute="leading" secondItem="VlF-gn-BVD" secondAttribute="leading" id="g7c-Cp-qav"/>
+                            <constraint firstItem="tbj-BY-kzJ" firstAttribute="top" secondItem="VlF-gn-BVD" secondAttribute="top" id="hpW-8x-OpB"/>
+                            <constraint firstItem="tbj-BY-kzJ" firstAttribute="bottom" secondItem="VlF-gn-BVD" secondAttribute="bottom" id="iB4-TD-aHm"/>
+                            <constraint firstItem="tbj-BY-kzJ" firstAttribute="trailing" secondItem="VlF-gn-BVD" secondAttribute="trailing" id="yJP-k8-mAz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VlF-gn-BVD"/>
                     </view>
                 </viewController>
@@ -106,6 +107,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Vl-21-ieb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.086274509799999996" blue="0.3294117647" alpha="0.80001100349999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

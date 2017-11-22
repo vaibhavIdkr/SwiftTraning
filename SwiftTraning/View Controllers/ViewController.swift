@@ -20,8 +20,13 @@ class ViewController: UIViewController
         
         tasksListView.dataSource = tableDataSource
         tasksListView.delegate   = tableDataSource
-
-        tableDataSource.selectedTaskCallback = { taskName in            
+    
+        self.populateTableView()
+    }
+    
+    func populateTableView() {
+        
+        tableDataSource.selectedTaskCallback = { taskName in
             
             var taskList:[String] = TasksDataSource().allTasks()
             
@@ -37,7 +42,6 @@ class ViewController: UIViewController
             }
         }
     }
-    
 }
 
 
