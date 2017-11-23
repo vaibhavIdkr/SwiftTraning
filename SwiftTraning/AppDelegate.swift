@@ -17,8 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UIApplication.shared.statusBarStyle              = .lightContent
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor           = UIColor.white
+        UINavigationBar.appearance().barTintColor        = UIColor.init(red: 2/255.0, green: 195/255.0, blue: 154/255.0, alpha: 1)
         
+        let demoListVC   = AllDemosListViewController.init(nibName: "AllDemosListViewController", bundle: nil)
+        let navigationVC = UINavigationController.init(rootViewController: demoListVC)
+        
+        window?.rootViewController = navigationVC
+            
         return true
     }
 

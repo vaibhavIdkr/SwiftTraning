@@ -2,31 +2,33 @@
 //  ToDoListViewController.swift
 //  SwiftTraning
 //
-//  Created by Vaibhav T. Indalkar on 21/11/17.
+//  Created by Vaibhav T. Indalkar on 23/11/17.
 //  Copyright © 2017 Vaibhav Indalkar. All rights reserved.
 //
 
 import UIKit
 
-class ToDoListViewController: UIViewController {
+class ToDoListViewController: UIViewController{
 
+    var reuseIdentifier = "collectionCell"
+    var dateCollectionViewDataSource   = DateCollectionViewDataSource.init(cellIdentifier: "collectionCell")
+    
+    @IBOutlet weak var calenderCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Things To-DO"
+    
+        self.calenderCollectionView.dataSource      = dateCollectionViewDataSource
+        self.calenderCollectionView.backgroundColor = UIColor.clear
+        self.calenderCollectionView.register(UINib.init(nibName: "DateColleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.title = "Task Listing"
+        self.navigationController?.isNavigationBarHidden = true;
         
-        self.configureNavigationToolBar()
     }
 
-    func configureNavigationToolBar(){
-        
-        let addBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector (pushAddTaskViewController))
-        
-        self.navigationController?.navigationItem.backBarButtonItem?.title = "<"
-        self.navigationController?.navigationItem.rightBarButtonItem = addBarButton
-    }
-    
-    @objc func pushAddTaskViewController(){
+    @IBAction func presentAddToDoTaskViewController(_ sender: Any) {
         
     }
+
 }

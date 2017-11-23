@@ -26,6 +26,8 @@ class TaskListViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate
             defaultCell = UITableViewCell (style: UITableViewCellStyle.default, reuseIdentifier: cellIdentifier)
         }
         
+        defaultCell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        
         let task = dataStore.allTasks()[indexPath.row]
         defaultCell!.textLabel!.text = task
         defaultCell?.selectionStyle = UITableViewCellSelectionStyle.none

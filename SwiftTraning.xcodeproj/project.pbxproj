@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24724CED1FC66ECF0038222D /* AllDemosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */; };
+		24724CEE1FC66ECF0038222D /* AllDemosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */; };
+		24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CEF1FC671670038222D /* ToDoListViewController.swift */; };
+		24724CF21FC671670038222D /* ToDoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24724CF01FC671670038222D /* ToDoListViewController.xib */; };
+		24724CF61FC694D00038222D /* DateColleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CF41FC694D00038222D /* DateColleCollectionViewCell.swift */; };
+		24724CF71FC694D00038222D /* DateColleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24724CF51FC694D00038222D /* DateColleCollectionViewCell.xib */; };
+		24724CF91FC696BD0038222D /* DateCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CF81FC696BD0038222D /* DateCollectionViewDataSource.swift */; };
+		24724CFD1FC69A450038222D /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CFC1FC69A450038222D /* Calender.swift */; };
 		24E331201FC3D340004BC27F /* TaskListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */; };
-		24E331221FC42587004BC27F /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E331211FC42587004BC27F /* ToDoListViewController.swift */; };
-		24E331261FC427A8004BC27F /* DefaultTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E331251FC427A8004BC27F /* DefaultTaskViewController.swift */; };
 		468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468218E21FC32CC4008F9EFF /* AppDelegate.swift */; };
 		468218E51FC32CC4008F9EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468218E41FC32CC4008F9EFF /* ViewController.swift */; };
 		468218E81FC32CC4008F9EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468218E61FC32CC4008F9EFF /* Main.storyboard */; };
@@ -30,9 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDemosListViewController.swift; sourceTree = "<group>"; };
+		24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllDemosListViewController.xib; sourceTree = "<group>"; };
+		24724CEF1FC671670038222D /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		24724CF01FC671670038222D /* ToDoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoListViewController.xib; sourceTree = "<group>"; };
+		24724CF41FC694D00038222D /* DateColleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateColleCollectionViewCell.swift; sourceTree = "<group>"; };
+		24724CF51FC694D00038222D /* DateColleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateColleCollectionViewCell.xib; sourceTree = "<group>"; };
+		24724CF81FC696BD0038222D /* DateCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		24724CFC1FC69A450038222D /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
 		24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewDataSource.swift; sourceTree = "<group>"; };
-		24E331211FC42587004BC27F /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
-		24E331251FC427A8004BC27F /* DefaultTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DefaultTaskViewController.swift; path = SwiftTraning/DefaultTaskViewController.swift; sourceTree = SOURCE_ROOT; };
 		468218DF1FC32CC4008F9EFF /* SwiftTraning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTraning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468218E21FC32CC4008F9EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468218E41FC32CC4008F9EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,22 +76,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24724CF31FC694940038222D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24724CF41FC694D00038222D /* DateColleCollectionViewCell.swift */,
+				24724CF51FC694D00038222D /* DateColleCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		24724CFB1FC69A310038222D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24724CFC1FC69A450038222D /* Calender.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		24E331231FC42591004BC27F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				468218E41FC32CC4008F9EFF /* ViewController.swift */,
-				24E331211FC42587004BC27F /* ToDoListViewController.swift */,
-				24E331251FC427A8004BC27F /* DefaultTaskViewController.swift */,
+				24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */,
+				24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */,
+				24724CEF1FC671670038222D /* ToDoListViewController.swift */,
+				24724CF01FC671670038222D /* ToDoListViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		4670A7E41FC5DF7300D2ABE5 /* TableVIewDataSources */ = {
+		4670A7E41FC5DF7300D2ABE5 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
 				24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */,
+				24724CF81FC696BD0038222D /* DateCollectionViewDataSource.swift */,
 			);
-			path = TableVIewDataSources;
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		468218D61FC32CC4008F9EFF = {
@@ -103,7 +135,9 @@
 		468218E11FC32CC4008F9EFF /* SwiftTraning */ = {
 			isa = PBXGroup;
 			children = (
-				4670A7E41FC5DF7300D2ABE5 /* TableVIewDataSources */,
+				24724CFB1FC69A310038222D /* Model */,
+				24724CF31FC694940038222D /* Cells */,
+				4670A7E41FC5DF7300D2ABE5 /* DataSources */,
 				24E331231FC42591004BC27F /* View Controllers */,
 				468218E21FC32CC4008F9EFF /* AppDelegate.swift */,
 				468218E61FC32CC4008F9EFF /* Main.storyboard */,
@@ -207,9 +241,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24724CF71FC694D00038222D /* DateColleCollectionViewCell.xib in Resources */,
 				468218F01FC32CC4008F9EFF /* LaunchScreen.storyboard in Resources */,
 				468218ED1FC32CC4008F9EFF /* Assets.xcassets in Resources */,
+				24724CF21FC671670038222D /* ToDoListViewController.xib in Resources */,
 				468218E81FC32CC4008F9EFF /* Main.storyboard in Resources */,
+				24724CEE1FC66ECF0038222D /* AllDemosListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24724CED1FC66ECF0038222D /* AllDemosListViewController.swift in Sources */,
+				24724CF91FC696BD0038222D /* DateCollectionViewDataSource.swift in Sources */,
+				24724CFD1FC69A450038222D /* Calender.swift in Sources */,
+				24724CF61FC694D00038222D /* DateColleCollectionViewCell.swift in Sources */,
 				24E331201FC3D340004BC27F /* TaskListViewDataSource.swift in Sources */,
 				468218E51FC32CC4008F9EFF /* ViewController.swift in Sources */,
 				468218EB1FC32CC4008F9EFF /* SwiftTraning.xcdatamodeld in Sources */,
-				24E331261FC427A8004BC27F /* DefaultTaskViewController.swift in Sources */,
-				24E331221FC42587004BC27F /* ToDoListViewController.swift in Sources */,
+				24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */,
 				468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
