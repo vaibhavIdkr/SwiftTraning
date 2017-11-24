@@ -54,7 +54,8 @@ class ToDoListViewController: UIViewController{
         let year                 = dateFormatter.string(from: currentDate)
         
         dateFormatter.dateFormat = "MMM"
-        self.monthLabel.text     = "\(dateFormatter.string(from: currentDate),year)"
+        let dateString:String    = dateFormatter.string(from: currentDate)+","+year
+        self.monthLabel.text     = dateString
     }
     
     @IBAction func presentAddToDoTaskViewController(_ sender: Any) {

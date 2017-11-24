@@ -67,7 +67,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-7F-OpA">
-                            <rect key="frame" x="74" y="39" width="133" height="17"/>
+                            <rect key="frame" x="74" y="41" width="133" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="133" id="PaT-PE-ip7"/>
                                 <constraint firstAttribute="height" constant="17" id="plD-hH-z00"/>
@@ -112,8 +112,8 @@
                         <constraint firstAttribute="trailing" secondItem="FNO-eV-zrm" secondAttribute="trailing" id="hIo-Pc-b3I"/>
                         <constraint firstItem="FNO-eV-zrm" firstAttribute="leading" secondItem="hhK-Fi-fku" secondAttribute="leading" id="iox-t5-I26"/>
                         <constraint firstItem="x78-Z5-lll" firstAttribute="top" secondItem="hhK-Fi-fku" secondAttribute="top" constant="33" id="slu-bf-b2H"/>
-                        <constraint firstItem="4hG-7F-OpA" firstAttribute="top" secondItem="hhK-Fi-fku" secondAttribute="top" constant="39" id="tUa-mJ-GwL"/>
-                        <constraint firstItem="DDh-8I-s83" firstAttribute="top" secondItem="4hG-7F-OpA" secondAttribute="bottom" constant="3" id="tnp-bV-A43"/>
+                        <constraint firstItem="4hG-7F-OpA" firstAttribute="top" secondItem="hhK-Fi-fku" secondAttribute="top" constant="41" id="tUa-mJ-GwL"/>
+                        <constraint firstItem="DDh-8I-s83" firstAttribute="top" secondItem="4hG-7F-OpA" secondAttribute="bottom" constant="1" id="tnp-bV-A43"/>
                         <constraint firstItem="4hG-7F-OpA" firstAttribute="leading" secondItem="x78-Z5-lll" secondAttribute="trailing" constant="8" id="ygy-Pa-Hfi"/>
                     </constraints>
                 </view>
