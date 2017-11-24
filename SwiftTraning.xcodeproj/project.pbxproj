@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24655C521FC820EE00F3F757 /* AddNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24655C501FC820EE00F3F757 /* AddNewTaskViewController.swift */; };
+		24655C531FC820EE00F3F757 /* AddNewTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24655C511FC820EE00F3F757 /* AddNewTaskViewController.xib */; };
 		24724CED1FC66ECF0038222D /* AllDemosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */; };
 		24724CEE1FC66ECF0038222D /* AllDemosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */; };
 		24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24724CEF1FC671670038222D /* ToDoListViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24655C501FC820EE00F3F757 /* AddNewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskViewController.swift; sourceTree = "<group>"; };
+		24655C511FC820EE00F3F757 /* AddNewTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewTaskViewController.xib; sourceTree = "<group>"; };
 		24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDemosListViewController.swift; sourceTree = "<group>"; };
 		24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllDemosListViewController.xib; sourceTree = "<group>"; };
 		24724CEF1FC671670038222D /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -96,11 +100,12 @@
 		24E331231FC42591004BC27F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				468218E41FC32CC4008F9EFF /* ViewController.swift */,
 				24724CEB1FC66ECF0038222D /* AllDemosListViewController.swift */,
 				24724CEC1FC66ECF0038222D /* AllDemosListViewController.xib */,
 				24724CEF1FC671670038222D /* ToDoListViewController.swift */,
 				24724CF01FC671670038222D /* ToDoListViewController.xib */,
+				24655C501FC820EE00F3F757 /* AddNewTaskViewController.swift */,
+				24655C511FC820EE00F3F757 /* AddNewTaskViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				4670A7E41FC5DF7300D2ABE5 /* DataSources */,
 				24E331231FC42591004BC27F /* View Controllers */,
 				468218E21FC32CC4008F9EFF /* AppDelegate.swift */,
+				468218E41FC32CC4008F9EFF /* ViewController.swift */,
 				468218E61FC32CC4008F9EFF /* Main.storyboard */,
 				468218EC1FC32CC4008F9EFF /* Assets.xcassets */,
 				468218EE1FC32CC4008F9EFF /* LaunchScreen.storyboard */,
@@ -246,6 +252,7 @@
 				468218ED1FC32CC4008F9EFF /* Assets.xcassets in Resources */,
 				24724CF21FC671670038222D /* ToDoListViewController.xib in Resources */,
 				468218E81FC32CC4008F9EFF /* Main.storyboard in Resources */,
+				24655C531FC820EE00F3F757 /* AddNewTaskViewController.xib in Resources */,
 				24724CEE1FC66ECF0038222D /* AllDemosListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +279,7 @@
 				468218E51FC32CC4008F9EFF /* ViewController.swift in Sources */,
 				468218EB1FC32CC4008F9EFF /* SwiftTraning.xcdatamodeld in Sources */,
 				24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */,
+				24655C521FC820EE00F3F757 /* AddNewTaskViewController.swift in Sources */,
 				468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Kohinoor.ttc">
-            <string>KohinoorDevanagari-Semibold</string>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
         </array>
     </customFonts>
     <objects>
@@ -24,20 +27,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-pX-fnH">
-                        <rect key="frame" x="5" y="3" width="50" height="21"/>
+                        <rect key="frame" x="5" y="3" width="50" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="aOe-GG-fGs"/>
+                            <constraint firstAttribute="height" constant="15" id="aOe-GG-fGs"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXY-UW-vL6">
-                        <rect key="frame" x="23" y="26" width="14" height="20"/>
+                        <rect key="frame" x="20.5" y="22" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="qk7-uM-fUS"/>
+                            <constraint firstAttribute="width" constant="20" id="sMY-jR-fsS"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
@@ -51,7 +55,7 @@
             <color key="backgroundColor" red="0.96862745100000003" green="0.39607843139999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="WXY-UW-vL6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="72h-4X-MMg"/>
-                <constraint firstItem="WXY-UW-vL6" firstAttribute="top" secondItem="0Ky-pX-fnH" secondAttribute="bottom" constant="2" id="7Ce-Tr-OLc"/>
+                <constraint firstItem="WXY-UW-vL6" firstAttribute="top" secondItem="0Ky-pX-fnH" secondAttribute="bottom" constant="4" id="7Ce-Tr-OLc"/>
                 <constraint firstAttribute="trailing" secondItem="0Ky-pX-fnH" secondAttribute="trailing" constant="5" id="TYK-g4-8Xv"/>
                 <constraint firstItem="0Ky-pX-fnH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="abK-d5-wPJ"/>
                 <constraint firstItem="0Ky-pX-fnH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="rFw-KT-xSf"/>
