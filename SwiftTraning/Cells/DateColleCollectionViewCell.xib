@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
         </array>
-        <array key="HelveticaNeueExtras.ttc">
-            <string>HelveticaNeue-CondensedBold</string>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -31,7 +31,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="aOe-GG-fGs"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,7 +41,7 @@
                             <constraint firstAttribute="height" constant="20" id="qk7-uM-fUS"/>
                             <constraint firstAttribute="width" constant="20" id="sMY-jR-fsS"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>

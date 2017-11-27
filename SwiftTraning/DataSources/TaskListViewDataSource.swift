@@ -29,7 +29,11 @@ class TaskListViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate
         defaultCell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         let task = dataStore.allTasks()[indexPath.row]
+        
+        defaultCell?.textLabel?.font = UIFont.init(name: "Roboto-Regular", size: 15.0)
+        defaultCell?.textLabel?.textColor = UIColor.darkGray
         defaultCell!.textLabel!.text = task
+        
         defaultCell?.selectionStyle = UITableViewCellSelectionStyle.none
         
         return defaultCell!

@@ -27,8 +27,7 @@ class AllDemosListViewController: UIViewController {
             
             switch selectedDemo {
             case taskList[0]:
-                
-                
+        
                 let toDoListVC = ToDoListViewController.init(nibName: "ToDoListViewController", bundle: nil)
                 self.navigationController?.pushViewController(toDoListVC, animated: true)
                 
@@ -37,5 +36,10 @@ class AllDemosListViewController: UIViewController {
                 break;
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false;
     }
 }

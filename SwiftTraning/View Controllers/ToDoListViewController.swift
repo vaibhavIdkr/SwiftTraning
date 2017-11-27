@@ -58,8 +58,14 @@ class ToDoListViewController: UIViewController{
         self.monthLabel.text     = dateString
     }
     
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func presentAddToDoTaskViewController(_ sender: Any) {
         
+        let newTaskVC = AddNewTaskViewController.init(nibName: "AddNewTaskViewController", bundle: nil)
+        self.present(newTaskVC, animated: true, completion: nil)
     }
-
 }
