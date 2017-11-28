@@ -50,6 +50,13 @@ class DateCollectionViewDataSource: NSObject,UICollectionViewDataSource,UICollec
         
         return cell;
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? DateColleCollectionViewCell{
+            cell.dateLabel.layer.cornerRadius = 10.0
+        }
+    }
 }
 
 class CalenderData {

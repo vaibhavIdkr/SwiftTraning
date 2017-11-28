@@ -17,5 +17,4 @@ class DateColleCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewTaskViewController" customModule="SwiftTraning" customModuleProvider="target">
             <connections>
                 <outlet property="addTaskButton" destination="Xwv-TQ-EMo" id="oGh-yQ-WFg"/>
+                <outlet property="taskView" destination="gGR-G4-d2s" id="WM5-UT-W6o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +47,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-TQ-EMo">
                     <rect key="frame" x="167" y="618" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.93725490196078431" green="0.49411764705882355" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.28627450980000002" green="0.26274509800000001" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="cJ1-dh-TSy"/>
                         <constraint firstAttribute="width" constant="40" id="qhZ-Mf-sm2"/>
@@ -104,7 +105,7 @@
                     <integer key="value" value="2"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-564" y="-966"/>
+            <point key="canvasLocation" x="-500" y="-1159"/>
         </view>
     </objects>
     <resources>
