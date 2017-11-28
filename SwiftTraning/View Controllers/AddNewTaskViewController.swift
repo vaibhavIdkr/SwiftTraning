@@ -12,6 +12,7 @@ class AddNewTaskViewController: UIViewController {
 
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskView: UIView!
+    let toDoViewModel = ToDoViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,10 @@ class AddNewTaskViewController: UIViewController {
         UIApplication.shared.isStatusBarHidden = true
         self.addButtonShadow()
         self.addShadow(shadowView: taskView)
+        
+        let gradientLayer = toDoViewModel.gradientLayer(shouldBeHorizontal: false)
+        gradientLayer.frame = (UIApplication.shared.keyWindow?.frame)!
+        self.view.layer.addSublayer(gradientLayer)
     }
     
     func addButtonShadow(){

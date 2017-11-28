@@ -27,6 +27,7 @@
                 <outlet property="dateLabel" destination="x78-Z5-lll" id="W7d-LP-SNx"/>
                 <outlet property="dayOfWeekLabel" destination="4hG-7F-OpA" id="BhN-uB-efG"/>
                 <outlet property="monthLabel" destination="DDh-8I-s83" id="Qn3-Gg-sDl"/>
+                <outlet property="topView" destination="hhK-Fi-fku" id="VPF-07-jZj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

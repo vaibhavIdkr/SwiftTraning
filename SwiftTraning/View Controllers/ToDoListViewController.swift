@@ -10,6 +10,7 @@ import UIKit
 
 class ToDoListViewController: UIViewController{
 
+    @IBOutlet weak var topView: UIView!
     var reuseIdentifier = "collectionCell"
     let toDoViewModelInstance = ToDoViewModel()
     
@@ -33,6 +34,10 @@ class ToDoListViewController: UIViewController{
 
         self.navigationController?.isNavigationBarHidden = true;
         self.setDateLabels()
+        
+        let gradientLayer = toDoViewModelInstance.gradientLayer(shouldBeHorizontal: true)
+        gradientLayer.frame = self.topView.frame
+        topView.layer.addSublayer(gradientLayer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
