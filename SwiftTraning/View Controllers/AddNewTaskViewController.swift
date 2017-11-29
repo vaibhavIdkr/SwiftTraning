@@ -22,10 +22,10 @@ class AddNewTaskViewController: UIViewController {
         self.addShadow(shadowView: taskView)
         
         let gradientLayer = toDoViewModel.gradientLayer(shouldBeHorizontal: false)
-        gradientLayer.frame = (UIApplication.shared.keyWindow?.frame)!
-        self.view.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    
+
     func addButtonShadow(){
         
         addTaskButton.layer.shadowColor = UIColor(red: 73/255.0, green: 67/255.0, blue: 134/255.0, alpha:0.7).cgColor

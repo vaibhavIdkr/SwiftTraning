@@ -52,7 +52,7 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.39607843139999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="WXY-UW-vL6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="72h-4X-MMg"/>
                 <constraint firstItem="WXY-UW-vL6" firstAttribute="top" secondItem="0Ky-pX-fnH" secondAttribute="bottom" constant="4" id="7Ce-Tr-OLc"/>

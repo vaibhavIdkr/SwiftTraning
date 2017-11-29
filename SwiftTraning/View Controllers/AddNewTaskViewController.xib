@@ -47,7 +47,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-TQ-EMo">
                     <rect key="frame" x="167" y="618" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.28627450980000002" green="0.26274509800000001" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.5490196078431373" green="0.33333333333333331" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="cJ1-dh-TSy"/>
                         <constraint firstAttribute="width" constant="40" id="qhZ-Mf-sm2"/>
@@ -63,12 +63,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVj-a4-6fE">
-                    <rect key="frame" x="14" y="10" width="30" height="30"/>
+                    <rect key="frame" x="8" y="10" width="40" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="1g9-s1-gDg"/>
-                        <constraint firstAttribute="height" constant="30" id="dhF-kW-8i0"/>
+                        <constraint firstAttribute="width" constant="40" id="1g9-s1-gDg"/>
+                        <constraint firstAttribute="height" constant="35" id="dhF-kW-8i0"/>
                     </constraints>
-                    <state key="normal" image="back arrow voilet"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="backArrowWhite"/>
                     <connections>
                         <action selector="onDismissViewControllerButtonTapped:" destination="-1" eventType="touchUpInside" id="85l-Qy-Xih"/>
                     </connections>
@@ -79,7 +80,7 @@
                         <constraint firstAttribute="width" constant="109" id="bll-rV-fz4"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                    <color key="textColor" red="0.28627450980000002" green="0.26274509800000001" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -92,7 +93,7 @@
                 <constraint firstItem="gGR-G4-d2s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="IJv-uu-wq8"/>
                 <constraint firstItem="MVj-a4-6fE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="IPL-gz-vsV"/>
                 <constraint firstItem="AKd-TJ-MXG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="Qh9-4N-ZNb"/>
-                <constraint firstItem="MVj-a4-6fE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="Tnj-VO-xRF"/>
+                <constraint firstItem="MVj-a4-6fE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Tnj-VO-xRF"/>
                 <constraint firstAttribute="bottom" secondItem="Xwv-TQ-EMo" secondAttribute="bottom" constant="9" id="Ug2-e9-8pA"/>
                 <constraint firstItem="Xwv-TQ-EMo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="auB-OR-B7k"/>
                 <constraint firstAttribute="bottom" secondItem="gGR-G4-d2s" secondAttribute="bottom" constant="29" id="bcX-Hz-q6s"/>
@@ -105,11 +106,11 @@
                     <integer key="value" value="2"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-500" y="-1159"/>
+            <point key="canvasLocation" x="-868" y="-1377"/>
         </view>
     </objects>
     <resources>
-        <image name="back arrow voilet" width="30" height="30"/>
+        <image name="backArrowWhite" width="45" height="45"/>
         <image name="correct" width="40" height="40"/>
     </resources>
 </document>

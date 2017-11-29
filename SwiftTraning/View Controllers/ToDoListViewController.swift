@@ -33,11 +33,7 @@ class ToDoListViewController: UIViewController{
         self.calenderCollectionView.register(UINib.init(nibName: "DateColleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
 
         self.navigationController?.isNavigationBarHidden = true;
-        self.setDateLabels()
-        
-        let gradientLayer = toDoViewModelInstance.gradientLayer(shouldBeHorizontal: true)
-        gradientLayer.frame = self.topView.frame
-        topView.layer.addSublayer(gradientLayer)
+        configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +51,7 @@ class ToDoListViewController: UIViewController{
         }
     }
     
-    func setDateLabels() {
+    func configureUI() {
         
         if let dateString = toDoViewModelInstance.stringFromDate(){
              self.dateLabel.text = dateString
@@ -66,6 +62,11 @@ class ToDoListViewController: UIViewController{
         if let month = toDoViewModelInstance.combinedMonthYearFromDate(){
             self.monthLabel.text = month
         }
+        
+        let gradientLayer = toDoViewModelInstance.gradientLayer(shouldBeHorizontal: true)
+        gradientLayer.frame = self.topView.bounds
+        self.topView.layer.insertSublayer(gradientLayer, at: 0)
+
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

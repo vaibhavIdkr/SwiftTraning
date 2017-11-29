@@ -36,7 +36,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-za-wl7">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-za-wl7">
                     <rect key="frame" x="0.0" y="140" width="375" height="527"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -62,10 +62,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhK-Fi-fku">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-7F-OpA">
-                            <rect key="frame" x="298" y="21" width="69" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedensday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hG-7F-OpA">
+                            <rect key="frame" x="288" y="21" width="79" height="17"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="69" id="PaT-PE-ip7"/>
+                                <constraint firstAttribute="width" constant="79" id="PaT-PE-ip7"/>
                                 <constraint firstAttribute="height" constant="17" id="plD-hH-z00"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
@@ -73,7 +73,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan,2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDh-8I-s83">
-                            <rect key="frame" x="298" y="41" width="69" height="17"/>
+                            <rect key="frame" x="288" y="41" width="69" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="17" id="HuT-Bs-K21"/>
                                 <constraint firstAttribute="width" constant="69" id="J4y-fV-uRY"/>
@@ -84,7 +84,7 @@
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FNO-eV-zrm">
                             <rect key="frame" x="0.0" y="88" width="375" height="53"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="53" id="oL1-Cm-v0p"/>
                             </constraints>
@@ -113,7 +113,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x78-Z5-lll">
-                            <rect key="frame" x="245" y="15" width="50" height="50"/>
+                            <rect key="frame" x="235" y="15" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="422-tA-u4G"/>
                                 <constraint firstAttribute="width" constant="50" id="IRe-sQ-0Ew"/>
