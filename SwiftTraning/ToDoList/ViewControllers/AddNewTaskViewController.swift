@@ -17,12 +17,15 @@ class AddNewTaskViewController: UIViewController {
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskView: UIView!
     
+    let pickderViewDataSource = TimePickerDataSource()
     let toDoViewModel = ToDoViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
+        timePickerView.delegate = pickderViewDataSource
+
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM dd , yyyy";
         

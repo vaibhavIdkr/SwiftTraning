@@ -30,6 +30,8 @@
 		247A75621FCC0FAE0039B709 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 247A75501FCC0F450039B709 /* Roboto-ThinItalic.ttf */; };
 		24C204AB1FCD329A00878318 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C204AA1FCD329A00878318 /* ToDoViewModel.swift */; };
 		24E331201FC3D340004BC27F /* TaskListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */; };
+		46512FD31FE6D0B300A99A55 /* TimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46512FD21FE6D0B300A99A55 /* TimePickerDataSource.swift */; };
+		46512FD61FE6D3C000A99A55 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46512FD51FE6D3C000A99A55 /* Date+Extensions.swift */; };
 		468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468218E21FC32CC4008F9EFF /* AppDelegate.swift */; };
 		468218E51FC32CC4008F9EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468218E41FC32CC4008F9EFF /* ViewController.swift */; };
 		468218E81FC32CC4008F9EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468218E61FC32CC4008F9EFF /* Main.storyboard */; };
@@ -73,6 +75,8 @@
 		247A75561FCC0F470039B709 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		24C204AA1FCD329A00878318 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
 		24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewDataSource.swift; sourceTree = "<group>"; };
+		46512FD21FE6D0B300A99A55 /* TimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerDataSource.swift; sourceTree = "<group>"; };
+		46512FD51FE6D3C000A99A55 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		468218DF1FC32CC4008F9EFF /* SwiftTraning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTraning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468218E21FC32CC4008F9EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468218E41FC32CC4008F9EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		46512FD41FE6D13100A99A55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46512FD51FE6D3C000A99A55 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		468218D61FC32CC4008F9EFF = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		46F13B071FD1968B005792A2 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				46512FD41FE6D13100A99A55 /* Extensions */,
 				46F13B0B1FD196DA005792A2 /* Cells */,
 				46F13B0A1FD196BD005792A2 /* DataSourceAndDelegates */,
 				46F13B091FD196A5005792A2 /* ViewControllers */,
@@ -211,6 +224,7 @@
 			children = (
 				24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */,
 				24724CF81FC696BD0038222D /* DateCollectionViewDataSource.swift */,
+				46512FD21FE6D0B300A99A55 /* TimePickerDataSource.swift */,
 			);
 			path = DataSourceAndDelegates;
 			sourceTree = "<group>";
@@ -348,10 +362,12 @@
 				24C204AB1FCD329A00878318 /* ToDoViewModel.swift in Sources */,
 				24724CF61FC694D00038222D /* DateColleCollectionViewCell.swift in Sources */,
 				24E331201FC3D340004BC27F /* TaskListViewDataSource.swift in Sources */,
+				46512FD61FE6D3C000A99A55 /* Date+Extensions.swift in Sources */,
 				468218E51FC32CC4008F9EFF /* ViewController.swift in Sources */,
 				468218EB1FC32CC4008F9EFF /* SwiftTraning.xcdatamodeld in Sources */,
 				24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */,
 				24655C521FC820EE00F3F757 /* AddNewTaskViewController.swift in Sources */,
+				46512FD31FE6D0B300A99A55 /* TimePickerDataSource.swift in Sources */,
 				468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
