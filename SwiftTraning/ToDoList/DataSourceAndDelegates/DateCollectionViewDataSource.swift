@@ -15,11 +15,12 @@ class DateCollectionViewDataSource: NSObject,UICollectionViewDataSource,UICollec
     var cellIdentifier      : String?
     var daysInCurrentMonth  : Int?
     let currentDayOfMonth   : Int?
+    let toDoViewModel = ToDoViewModel()
     
     init(cellIdentifier:String) {
         self.cellIdentifier = cellIdentifier
-        self.daysInCurrentMonth = Date().daysInCurrentMonth()
-        self.currentDayOfMonth  = Date().currentDay()
+        self.daysInCurrentMonth = toDoViewModel.numberOfDaysInMonth()
+        self.currentDayOfMonth  = toDoViewModel.currentDayOfMonth()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -75,43 +76,7 @@ class CalenderData {
         
         return day;
     }
-    
-    func currentDayOfMonth() -> Int {
-        if let currentDay = Date().currentDay(){
-            return currentDay
-        }else {
-            return 0;
-        }
-    }
 }
 
-extension Date {
-    
-    func daysInCurrentMonth() -> Int? {
-        
-        let dateRange = Calendar.current.range(of: .day, in: .month, for: Date())
-        let days      = dateRange?.count
-        return days!
-    }
-    
-    func currentDay() -> Int? {
-        
-        let dateComponent:DateComponents = Calendar.current.dateComponents([.year,.month,.day], from: self)
-        return dateComponent.day!
-    }
-    
-    func startOfMonth() -> Date? {
-        
-        let components:NSDateComponents = Calendar.current.dateComponents([.year,.month,], from: self) as NSDateComponents
-        let componentDate = Calendar.current.date(from: components as DateComponents)
-        
-        return Calendar.current.date(byAdding: .day, value: 0, to: componentDate!)
-    }
-    
-    func lastDayOfMonth() -> Date? {
-        
-        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth()!)!
-    }
-}
 
 

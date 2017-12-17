@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "plus_icon_purple_100x100.png",
+      "filename" : "shoppingCart_60x60.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "plus_icon_purple_150x150.png",
+      "filename" : "shoppingCart_90x90.png",
       "scale" : "3x"
     }
   ],

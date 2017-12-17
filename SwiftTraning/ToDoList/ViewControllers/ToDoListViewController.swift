@@ -10,24 +10,26 @@ import UIKit
 
 class ToDoListViewController: UIViewController{
 
+    var reuseIdentifier:String = "collectionCell"
+    let toDoViewModelInstance  = ToDoViewModel()
+    var dateCollectionViewDataSource : DateCollectionViewDataSource?
+
     @IBOutlet weak var topView: UIView!
-    var reuseIdentifier = "collectionCell"
-    let toDoViewModelInstance = ToDoViewModel()
-    
-    var dateCollectionViewDataSource   = DateCollectionViewDataSource.init(cellIdentifier: "collectionCell")
-    override var prefersStatusBarHidden: Bool{
-        return false
-    }
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dayOfWeekLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calenderCollectionView: UICollectionView!
     
+    override var prefersStatusBarHidden: Bool{
+        return false
+    }
+    
+    //MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Things To-DO"
-    
+        
+        dateCollectionViewDataSource = DateCollectionViewDataSource.init(cellIdentifier: reuseIdentifier)
         self.calenderCollectionView.dataSource      = dateCollectionViewDataSource
         self.calenderCollectionView.backgroundColor = UIColor.clear
         self.calenderCollectionView.register(UINib.init(nibName: "DateColleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
@@ -45,12 +47,13 @@ class ToDoListViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if let currentDate = dateCollectionViewDataSource.currentDayOfMonth {
-            let newIndexPath:IndexPath = IndexPath.init(row: currentDate, section: 0);
+        if let currentDate = dateCollectionViewDataSource?.currentDayOfMonth {
+            let newIndexPath:IndexPath = IndexPath.init(row: currentDate - 1, section: 0);
             self.calenderCollectionView .scrollToItem(at: newIndexPath, at: .left, animated: true)
         }
     }
     
+    //MARK: Private methods
     func configureUI() {
         
         if let dateString = toDoViewModelInstance.stringFromDate(){
@@ -69,6 +72,7 @@ class ToDoListViewController: UIViewController{
 
     }
     
+    //MARK: Button action methods
     @IBAction func backButtonTapped(_ sender: Any) {
         
         let animationTransition = toDoViewModelInstance.pushPopTransationAnimation()
