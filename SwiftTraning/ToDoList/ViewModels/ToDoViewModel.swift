@@ -24,6 +24,12 @@ class ToDoViewModel: NSObject {
         return Date().daysInCurrentMonth()
     }
     
+    func imageViewWithImage(image:UIImage) -> UIImageView {
+        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
+        imageView.image = image
+        return imageView
+    }
+    
     func pushPopTransationAnimation() -> (CATransition){
         
         let transition = CATransition()

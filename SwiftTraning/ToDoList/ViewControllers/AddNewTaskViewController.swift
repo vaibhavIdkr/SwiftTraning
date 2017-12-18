@@ -10,10 +10,10 @@ import UIKit
 
 class AddNewTaskViewController: UIViewController {
 
-    @IBOutlet weak var timePickerView: UIPickerView!
-    @IBOutlet weak var additionalNotesTextView: UITextView!
-    @IBOutlet weak var shouldRemindSwitch: UISwitch!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var taskCategoryTextField: UITextField!
+    @IBOutlet weak var taskDescriptionTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskView: UIView!
     
@@ -23,30 +23,30 @@ class AddNewTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        timePickerView.delegate = pickderViewDataSource
-
+                
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM dd , yyyy";
         
         if let currentDate = Date().dateWithFormatter(formatter: formatter) {
-            self.dateLabel.text = currentDate
+            self.dateTextField.text = currentDate
         }
     }
     
     func setupUI() {
         
         UIApplication.shared.isStatusBarHidden = true
-        
+
         self.addShadow(shadowView: addTaskButton)
         self.addShadow(shadowView: taskView)
-        
-        let scale = CGAffineTransform.init(scaleX:0.7, y: 0.7)
-        shouldRemindSwitch.transform = scale;
         
         let gradientLayer = toDoViewModel.gradientLayer(shouldBeHorizontal: false)
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        self.taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
+        self.taskCategoryTextField.rightViewMode = .always
+        self.timeTextField.rightView         = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
+        self.timeTextField.rightViewMode     = .always
     }
     
     func addShadow(shadowView:UIView) -> (){
