@@ -25,7 +25,7 @@ class ToDoViewModel: NSObject {
     }
     
     func imageViewWithImage(image:UIImage) -> UIImageView {
-        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
+        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 40))
         imageView.image = image
         return imageView
     }

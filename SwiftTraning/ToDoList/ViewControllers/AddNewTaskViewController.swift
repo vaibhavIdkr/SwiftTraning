@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewTaskViewController: UIViewController {
+class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var taskCategoryTextField: UITextField!
     @IBOutlet weak var taskDescriptionTextField: UITextField!
@@ -20,6 +20,8 @@ class AddNewTaskViewController: UIViewController {
     let pickderViewDataSource = TimePickerDataSource()
     let toDoViewModel = ToDoViewModel()
     
+    
+    //MARK: - view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -57,11 +59,32 @@ class AddNewTaskViewController: UIViewController {
         shadowView.layer.shadowRadius = 4.0
     }
     
+    //MARK: - Delegates
+    //MARK:  Textfield
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == timeTextField {
+            let timePickerVC = TimePickerViewController.init(nibName: "TimePickerViewController", bundle: nil)
+            
+            timePickerVC.didPickTimeForReminderCallback = { hours,minutes in
+                
+                self.timeTextField.text = "\(hours):\(minutes)"
+            }
+            self.present(timePickerVC, animated: true, completion: nil)
+        }
+        
+        return true
+    }
+    
+    //MARK: - Button action
+    @IBAction func onAddTaskButtonTapped(_ sender: Any) {
+        
+    }
+    
     @IBAction func onDismissViewControllerButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
     }
     
-    @IBAction func onAddTaskButtonTapped(_ sender: Any) {
-        
-    }
+   
 }

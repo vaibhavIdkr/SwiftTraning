@@ -1,19 +1,30 @@
 //
-//  TimePickerDataSource.swift
+//  TimePickerViewController.swift
 //  SwiftTraning
 //
-//  Created by Vaibhav Indalkar on 17/12/17.
+//  Created by Vaibhav Indalkar on 18/12/17.
 //  Copyright © 2017 Vaibhav Indalkar. All rights reserved.
 //
 
 import UIKit
 
-class TimePickerDataSource: NSObject,UIPickerViewDelegate,UIPickerViewDataSource {
+class TimePickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
-    let dataSource = TimePickerData()
-    let pickerOneData = TimePickerData().numberOfRowsForPickerOne()
-    let pickerTwoData = TimePickerData().numberOfRowsForPickerTwo()
+    @IBOutlet weak var timePickerView: UIPickerView!
+    var didPickTimeForReminderCallback : ((_ hours : Int ,_ minutes : Int) -> ())?
     
+    let toDoViewModel = ToDoViewModel()
+    let pickerOneData = TimePickerDataSource().numberOfRowsForPickerOne()
+    let pickerTwoData = TimePickerDataSource().numberOfRowsForPickerTwo()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        timePickerView.delegate = self
+        timePickerView.dataSource = self
+    }
+
+    //MARK: - Picker view Delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         pickerView.subviews.forEach({
@@ -33,11 +44,11 @@ class TimePickerDataSource: NSObject,UIPickerViewDelegate,UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 80;
+        return 170;
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 30;
+        return 130;
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -45,9 +56,9 @@ class TimePickerDataSource: NSObject,UIPickerViewDelegate,UIPickerViewDataSource
         var pickerViewLabel = view as? UILabel
         
         if pickerViewLabel == nil {
-            pickerViewLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 80, height: 30))
-            pickerViewLabel?.font = UIFont.init(name: "Roboto-Medium", size: 15)
-            pickerViewLabel?.textColor = UIColor.init(red: 62/255, green: 62/255, blue: 62/255, alpha: 1)
+            pickerViewLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 170, height: 130))
+            pickerViewLabel?.font = UIFont.init(name: "Roboto-Medium", size: 40)
+            pickerViewLabel?.textColor = UIColor.white
             pickerViewLabel?.textAlignment = .center
         }
         
@@ -61,9 +72,22 @@ class TimePickerDataSource: NSObject,UIPickerViewDelegate,UIPickerViewDataSource
         }
         return pickerViewLabel!
     }
+    
+    //Mark: - Button action methods
+
+    @IBAction func onBackButtonTapped(_ sender: Any) {
+        
+        if let timePickCallback = didPickTimeForReminderCallback {
+            let hours = (pickerOneData[timePickerView.selectedRow(inComponent: 0)] as NSString).integerValue
+            let minutes = (pickerTwoData[timePickerView.selectedRow(inComponent: 1)] as NSString).integerValue
+            
+            timePickCallback(hours,minutes)
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
-class TimePickerData {
+class TimePickerDataSource {
     
     func numberOfRowsForPickerOne() -> [String] {
         
@@ -92,6 +116,6 @@ class TimePickerData {
                 rowTwoDataArray.append("\(rowIndex)")
             }
         }
-         return rowTwoDataArray
+        return rowTwoDataArray
     }
 }

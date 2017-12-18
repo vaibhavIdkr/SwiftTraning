@@ -96,10 +96,13 @@
                             </constraints>
                         </view>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="boL-VP-8Mh">
-                            <rect key="frame" x="30" y="282.33333333333331" width="324" height="20"/>
+                            <rect key="frame" x="30" y="282.33333333333331" width="336" height="20"/>
                             <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="c69-YW-3I2"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwv-TQ-EMo">
                             <rect key="frame" x="125" y="550" width="134" height="40"/>
@@ -131,7 +134,7 @@
                         <constraint firstItem="dLr-Ym-1TP" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="BkC-Rn-9GT"/>
                         <constraint firstAttribute="bottom" secondItem="Xwv-TQ-EMo" secondAttribute="bottom" constant="18" id="Kbc-7X-KDT"/>
                         <constraint firstItem="Ai6-X4-on1" firstAttribute="top" secondItem="mPF-Iu-xx4" secondAttribute="bottom" constant="10" id="NIA-2R-VKX"/>
-                        <constraint firstAttribute="trailing" secondItem="boL-VP-8Mh" secondAttribute="trailing" constant="20" id="NbB-2Q-8WA"/>
+                        <constraint firstAttribute="trailing" secondItem="boL-VP-8Mh" secondAttribute="trailing" constant="8" id="NbB-2Q-8WA"/>
                         <constraint firstAttribute="trailing" secondItem="YGM-5c-HYt" secondAttribute="trailing" id="Ntu-DB-Lu7"/>
                         <constraint firstItem="1ZA-ZO-tmQ" firstAttribute="top" secondItem="gGR-G4-d2s" secondAttribute="top" constant="73" id="RFj-kx-oEG"/>
                         <constraint firstAttribute="trailing" secondItem="dLr-Ym-1TP" secondAttribute="trailing" id="U8C-7b-CXc"/>
