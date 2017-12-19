@@ -42,11 +42,7 @@ class ToDoListViewController: UIViewController{
         super.viewWillAppear(animated)
         
         UIApplication.shared.isStatusBarHidden = false;
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+        
         if let currentDate = dateCollectionViewDataSource?.currentDayOfMonth {
             let newIndexPath:IndexPath = IndexPath.init(row: currentDate - 1, section: 0);
             self.calenderCollectionView .scrollToItem(at: newIndexPath, at: .left, animated: true)

@@ -39,7 +39,7 @@ class DateCollectionViewDataSource: NSObject,UICollectionViewDataSource,UICollec
         cell.dateLabel.text = "\(indexPath.row + 1)";
         
         if ((indexPath.row + 1) == self.currentDayOfMonth){
-            cell.dateLabel.textColor           = UIColor.init(red: 247/255.0, green: 101/255.0, blue: 105/255.0, alpha: 1)
+            cell.dateLabel.textColor           = UIColor.init(red: 124/255.0, green: 57/255.0, blue: 172/255.0, alpha: 1)
             cell.dateLabel.backgroundColor     = UIColor.white
             cell.dateLabel.layer.masksToBounds = true
             cell.dateLabel.layer.cornerRadius  = 10.0;

@@ -16,7 +16,7 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskView: UIView!
-    
+    @IBOutlet weak var reminderSwitch: UISwitch!
     let pickderViewDataSource = TimePickerDataSource()
     let toDoViewModel = ToDoViewModel()
     
@@ -38,17 +38,19 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         
         UIApplication.shared.isStatusBarHidden = true
 
-        self.addShadow(shadowView: addTaskButton)
-        self.addShadow(shadowView: taskView)
+        reminderSwitch.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
+        
+        addShadow(shadowView: addTaskButton)
+        addShadow(shadowView: taskView)
         
         let gradientLayer = toDoViewModel.gradientLayer(shouldBeHorizontal: false)
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        self.taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
-        self.taskCategoryTextField.rightViewMode = .always
-        self.timeTextField.rightView         = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
-        self.timeTextField.rightViewMode     = .always
+        taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
+        taskCategoryTextField.rightViewMode = .always
+        timeTextField.rightView         = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
+        timeTextField.rightViewMode     = .always
     }
     
     func addShadow(shadowView:UIView) -> (){
@@ -64,14 +66,24 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
-        if textField == timeTextField {
-            let timePickerVC = TimePickerViewController.init(nibName: "TimePickerViewController", bundle: nil)
+        switch textField {
             
+        case timeTextField:
+            
+            let timePickerVC = TimePickerViewController.init(nibName: "TimePickerViewController", bundle: nil)
             timePickerVC.didPickTimeForReminderCallback = { hours,minutes in
-                
                 self.timeTextField.text = "\(hours):\(minutes)"
             }
             self.present(timePickerVC, animated: true, completion: nil)
+            return false
+            
+        case taskCategoryTextField:
+            
+            presentCategoryActionSheet()
+            return false
+            
+        default:
+            break;
         }
         
         return true
@@ -86,5 +98,26 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         self.dismiss(animated: true, completion:nil)
     }
     
-   
+    //MARK: - Private Methods
+    func presentCategoryActionSheet() {
+        
+        let categories = toDoViewModel.getReminderCategories()
+        let categoryActionSheet = UIAlertController.init(title: "Categories", message: "Pick One", preferredStyle: .actionSheet)
+        
+        for alertCategory in categories {
+            let alertAction = UIAlertAction.init(title: alertCategory, style: .default, handler: {(alertAction : UIAlertAction) in
+                self.taskCategoryTextField.text = alertCategory
+                categoryActionSheet.dismiss(animated: true, completion:nil)
+            })
+            categoryActionSheet.addAction(alertAction)
+        }
+        
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel, handler: { (action:UIAlertAction) in
+            categoryActionSheet.dismiss(animated: true, completion: nil)
+        })
+        
+        categoryActionSheet.addAction(cancelAction)
+        
+        self.present(categoryActionSheet, animated: true, completion: nil)
+    }
 }

@@ -22,6 +22,7 @@
             <connections>
                 <outlet property="addTaskButton" destination="Xwv-TQ-EMo" id="oGh-yQ-WFg"/>
                 <outlet property="dateTextField" destination="mPF-Iu-xx4" id="08e-UK-pXo"/>
+                <outlet property="reminderSwitch" destination="vyF-I8-Jlh" id="mHj-nm-kKl"/>
                 <outlet property="taskCategoryTextField" destination="1ZA-ZO-tmQ" id="60u-tT-3wO"/>
                 <outlet property="taskDescriptionTextField" destination="iMq-x3-Dqs" id="pFa-Lm-b0m"/>
                 <outlet property="taskView" destination="gGR-G4-d2s" id="WM5-UT-W6o"/>
@@ -75,6 +76,9 @@
                             <color key="textColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="XeY-P7-HwU"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Additional details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMq-x3-Dqs">
                             <rect key="frame" x="30" y="145" width="324" height="20"/>
@@ -122,6 +126,30 @@
                                 <action selector="onAddTaskButtonTapped:" destination="-1" eventType="touchUpInside" id="j1G-kJ-tNL"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-4B-Nid">
+                            <rect key="frame" x="30" y="348" width="86" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="86" id="NJB-rx-LMx"/>
+                                <constraint firstAttribute="height" constant="21" id="mda-6e-6OE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                            <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fpy-W8-TqF">
+                            <rect key="frame" x="29" y="379" width="345" height="1"/>
+                            <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="PXa-Le-fvc"/>
+                            </constraints>
+                        </view>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyF-I8-Jlh">
+                            <rect key="frame" x="315" y="342" width="49" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="47" id="1tf-9i-3tI"/>
+                                <constraint firstAttribute="height" constant="31" id="TaH-Lf-xs3"/>
+                            </constraints>
+                        </switch>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -131,21 +159,28 @@
                         <constraint firstAttribute="trailing" secondItem="1ZA-ZO-tmQ" secondAttribute="trailing" constant="8" id="2h8-ti-zae"/>
                         <constraint firstItem="mPF-Iu-xx4" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="7az-Hr-uNv"/>
                         <constraint firstItem="dLr-Ym-1TP" firstAttribute="top" secondItem="iMq-x3-Dqs" secondAttribute="bottom" constant="10" id="BC7-YH-9aP"/>
+                        <constraint firstItem="Fpy-W8-TqF" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="29" id="Bcd-1K-v2Z"/>
                         <constraint firstItem="dLr-Ym-1TP" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="BkC-Rn-9GT"/>
                         <constraint firstAttribute="bottom" secondItem="Xwv-TQ-EMo" secondAttribute="bottom" constant="18" id="Kbc-7X-KDT"/>
                         <constraint firstItem="Ai6-X4-on1" firstAttribute="top" secondItem="mPF-Iu-xx4" secondAttribute="bottom" constant="10" id="NIA-2R-VKX"/>
                         <constraint firstAttribute="trailing" secondItem="boL-VP-8Mh" secondAttribute="trailing" constant="8" id="NbB-2Q-8WA"/>
+                        <constraint firstItem="Fpy-W8-TqF" firstAttribute="top" secondItem="vyF-I8-Jlh" secondAttribute="bottom" constant="6" id="Nmo-f6-mLC"/>
                         <constraint firstAttribute="trailing" secondItem="YGM-5c-HYt" secondAttribute="trailing" id="Ntu-DB-Lu7"/>
+                        <constraint firstItem="4h4-4B-Nid" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="PO2-b5-K0U"/>
                         <constraint firstItem="1ZA-ZO-tmQ" firstAttribute="top" secondItem="gGR-G4-d2s" secondAttribute="top" constant="73" id="RFj-kx-oEG"/>
                         <constraint firstAttribute="trailing" secondItem="dLr-Ym-1TP" secondAttribute="trailing" id="U8C-7b-CXc"/>
+                        <constraint firstItem="Fpy-W8-TqF" firstAttribute="top" secondItem="4h4-4B-Nid" secondAttribute="bottom" constant="10" id="V9i-KE-jp1"/>
                         <constraint firstItem="boL-VP-8Mh" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="W4F-06-FVc"/>
                         <constraint firstItem="Xwv-TQ-EMo" firstAttribute="centerX" secondItem="gGR-G4-d2s" secondAttribute="centerX" constant="5" id="Zd0-pN-ua5"/>
                         <constraint firstAttribute="trailing" secondItem="Plu-Db-1i7" secondAttribute="trailing" id="aE8-nj-3Gj"/>
+                        <constraint firstAttribute="trailing" secondItem="Fpy-W8-TqF" secondAttribute="trailing" id="ixd-sb-5ef"/>
                         <constraint firstItem="boL-VP-8Mh" firstAttribute="top" secondItem="Ai6-X4-on1" secondAttribute="bottom" constant="36.999999999999943" id="kAh-cx-9bO"/>
                         <constraint firstAttribute="trailing" secondItem="Ai6-X4-on1" secondAttribute="trailing" id="kbs-yF-NRQ"/>
+                        <constraint firstItem="4h4-4B-Nid" firstAttribute="top" secondItem="Plu-Db-1i7" secondAttribute="bottom" constant="35" id="lMY-Kf-Wia"/>
                         <constraint firstItem="1ZA-ZO-tmQ" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="29" id="mjE-IC-SZr"/>
                         <constraint firstItem="mPF-Iu-xx4" firstAttribute="top" secondItem="dLr-Ym-1TP" secondAttribute="bottom" constant="37.666666666666657" id="nqU-xj-Mva"/>
                         <constraint firstAttribute="trailing" secondItem="mPF-Iu-xx4" secondAttribute="trailing" constant="20" id="oz4-JZ-EFM"/>
+                        <constraint firstAttribute="trailing" secondItem="vyF-I8-Jlh" secondAttribute="trailing" constant="12" id="p2C-hG-jWJ"/>
                         <constraint firstItem="Ai6-X4-on1" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="p2Z-Xg-lgm"/>
                         <constraint firstItem="Plu-Db-1i7" firstAttribute="top" secondItem="boL-VP-8Mh" secondAttribute="bottom" constant="10" id="qB4-iO-XtA"/>
                         <constraint firstItem="Plu-Db-1i7" firstAttribute="leading" secondItem="gGR-G4-d2s" secondAttribute="leading" constant="30" id="uRT-ej-j2U"/>
@@ -201,7 +236,7 @@
                     <integer key="value" value="2"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-1508" y="-1395"/>
+            <point key="canvasLocation" x="-1951" y="-1616"/>
         </view>
     </objects>
     <resources>

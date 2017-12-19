@@ -81,6 +81,10 @@ class ToDoViewModel: NSObject {
         }
         return ""
     }
+    
+    func getReminderCategories() -> [String] {
+        return ["Shopping","Grocery","Bill Payment","Medicines","Checkup","Fuel","Top Up's"]
+    }
 }
 
 //MARK: Extenions
