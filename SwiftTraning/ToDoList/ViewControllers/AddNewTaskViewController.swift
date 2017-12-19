@@ -47,7 +47,7 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
+        taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "downArrow"))
         taskCategoryTextField.rightViewMode = .always
         timeTextField.rightView         = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
         timeTextField.rightViewMode     = .always
@@ -92,6 +92,9 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
     //MARK: - Button action
     @IBAction func onAddTaskButtonTapped(_ sender: Any) {
         
+        if taskViewValidated() {
+            showAlertWithMessage(message: "valid view")
+        }
     }
     
     @IBAction func onDismissViewControllerButtonTapped(_ sender: Any) {
@@ -102,7 +105,7 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
     func presentCategoryActionSheet() {
         
         let categories = toDoViewModel.getReminderCategories()
-        let categoryActionSheet = UIAlertController.init(title: "Categories", message: "Pick One", preferredStyle: .actionSheet)
+        let categoryActionSheet = UIAlertController.init(title: "Pick Categories", message: "", preferredStyle: .actionSheet)
         
         for alertCategory in categories {
             let alertAction = UIAlertAction.init(title: alertCategory, style: .default, handler: {(alertAction : UIAlertAction) in
@@ -119,5 +122,29 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         categoryActionSheet.addAction(cancelAction)
         
         self.present(categoryActionSheet, animated: true, completion: nil)
+    }
+    
+    func showAlertWithMessage(message:String) {
+        
+        let alertController = UIAlertController.init(title: "Error!!", message: message, preferredStyle: .alert)
+        let alertAction      = UIAlertAction.init(title: "OK", style: .cancel, handler: {(action:UIAlertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(alertAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func taskViewValidated() -> Bool {
+        
+        if (taskCategoryTextField.text?.isEmpty)! {
+            showAlertWithMessage(message: "Please choose reminder category.")
+            return false
+        }else if reminderSwitch.isOn && (timeTextField.text?.isEmpty)! {
+            showAlertWithMessage(message: "Please set the time for reminder.")
+            return false
+        }
+        
+        return true
     }
 }

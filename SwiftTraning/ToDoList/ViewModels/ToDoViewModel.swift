@@ -25,7 +25,7 @@ class ToDoViewModel: NSObject {
     }
     
     func imageViewWithImage(image:UIImage) -> UIImageView {
-        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 40))
+        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
         imageView.image = image
         return imageView
     }
@@ -83,7 +83,7 @@ class ToDoViewModel: NSObject {
     }
     
     func getReminderCategories() -> [String] {
-        return ["Shopping","Grocery","Bill Payment","Medicines","Checkup","Fuel","Top Up's"]
+        return ["Shopping","Grocery","Bill Payment","Health Checkup","Maintenance","Recharge"]
     }
 }
 
