@@ -171,7 +171,6 @@
 		468218E11FC32CC4008F9EFF /* SwiftTraning */ = {
 			isa = PBXGroup;
 			children = (
-				24A9A9411FEA635A0034EDA8 /* ToDoListExtension.swift */,
 				46F13B071FD1968B005792A2 /* ToDoList */,
 				247A754A1FCC0F340039B709 /* Fonts */,
 				24E331231FC42591004BC27F /* View Controllers */,
@@ -198,6 +197,7 @@
 		46F13B071FD1968B005792A2 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				24A9A9411FEA635A0034EDA8 /* ToDoListExtension.swift */,
 				460C62CC1FEAC1D8004AE973 /* Constants.swift */,
 				46512FD41FE6D13100A99A55 /* Extensions */,
 				46F13B0B1FD196DA005792A2 /* Cells */,
