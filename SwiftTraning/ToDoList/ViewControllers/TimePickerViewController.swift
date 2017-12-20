@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct ClassConstants {
+    static let deltaSize:CGFloat = 20;
+}
+
 class TimePickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     @IBOutlet weak var timePickerView: UIPickerView!
@@ -19,7 +23,7 @@ class TimePickerViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         timePickerView.delegate = self
         timePickerView.dataSource = self
     }
@@ -44,7 +48,7 @@ class TimePickerViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 170;
+        return (pickerView.frame.size.width - ClassConstants.deltaSize) / 2;
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -56,7 +60,7 @@ class TimePickerViewController: UIViewController,UIPickerViewDelegate,UIPickerVi
         var pickerViewLabel = view as? UILabel
         
         if pickerViewLabel == nil {
-            pickerViewLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 170, height: 130))
+            pickerViewLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: (pickerView.frame.size.width - ClassConstants.deltaSize) / 2, height: 130))
             pickerViewLabel?.font = UIFont.init(name: "Roboto-Medium", size: 40)
             pickerViewLabel?.textColor = UIColor.white
             pickerViewLabel?.textAlignment = .center

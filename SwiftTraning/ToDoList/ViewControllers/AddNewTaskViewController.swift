@@ -17,6 +17,8 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskView: UIView!
     @IBOutlet weak var reminderSwitch: UISwitch!
+    @IBOutlet weak var scheduleTaskButton: UIButton!
+    @IBOutlet weak var bottomScheduleButtonConstraint: NSLayoutConstraint!
     let pickderViewDataSource = TimePickerDataSource()
     let toDoViewModel = ToDoViewModel()
     
@@ -34,6 +36,14 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        UIView.animate(withDuration: 0.4, animations: {
+            self.bottomScheduleButtonConstraint.constant = 13
+            self.view.layoutIfNeeded()
+        });
+    }
+    
     func setupUI() {
         
         UIApplication.shared.isStatusBarHidden = true
@@ -47,7 +57,7 @@ class AddNewTaskViewController: UIViewController,UITextFieldDelegate {
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        taskCategoryTextField.rightView    = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "downArrow"))
+        taskCategoryTextField.rightView     = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "downArrow"))
         taskCategoryTextField.rightViewMode = .always
         timeTextField.rightView         = toDoViewModel.imageViewWithImage(image: #imageLiteral(resourceName: "rightArrow"))
         timeTextField.rightViewMode     = .always

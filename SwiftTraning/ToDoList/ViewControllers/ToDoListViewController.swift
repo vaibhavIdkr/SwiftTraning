@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ToDoListViewController: UIViewController{
 
@@ -14,6 +15,7 @@ class ToDoListViewController: UIViewController{
     let toDoViewModelInstance  = ToDoViewModel()
     var dateCollectionViewDataSource : DateCollectionViewDataSource?
 
+    @IBOutlet weak var addReminderButton: UIButton!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dayOfWeekLabel: UILabel!
@@ -42,15 +44,22 @@ class ToDoListViewController: UIViewController{
         super.viewWillAppear(animated)
         
         UIApplication.shared.isStatusBarHidden = false;
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
         
         if let currentDate = dateCollectionViewDataSource?.currentDayOfMonth {
             let newIndexPath:IndexPath = IndexPath.init(row: currentDate - 1, section: 0);
             self.calenderCollectionView .scrollToItem(at: newIndexPath, at: .left, animated: true)
         }
+        
+        let animation = swingAnimation()
+        addReminderButton.layer.add(animation, forKey: "rotation")
     }
     
     //MARK: Private methods
-    func configureUI() {
+    private func configureUI() {
         
         if let dateString = toDoViewModelInstance.stringFromDate(){
              self.dateLabel.text = dateString
@@ -66,6 +75,18 @@ class ToDoListViewController: UIViewController{
         gradientLayer.frame = self.topView.bounds
         self.topView.layer.insertSublayer(gradientLayer, at: 0)
 
+    }
+    
+    private func swingAnimation() -> CABasicAnimation {
+    
+        let animation = CABasicAnimation.init(keyPath: "transform.rotation.z")
+        animation.duration      = 0.15
+        animation.repeatCount   = 2
+        animation.autoreverses  = true
+        animation.fromValue     = NSNumber.init(value:0)
+        animation.toValue       = NSNumber.init(value:1.5708)
+        
+        return animation
     }
     
     //MARK: Button action methods
