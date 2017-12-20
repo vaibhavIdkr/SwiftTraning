@@ -28,6 +28,7 @@
 		247A75601FCC0FAE0039B709 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 247A75561FCC0F470039B709 /* Roboto-Regular.ttf */; };
 		247A75611FCC0FAE0039B709 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 247A754F1FCC0F450039B709 /* Roboto-Thin.ttf */; };
 		247A75621FCC0FAE0039B709 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 247A75501FCC0F450039B709 /* Roboto-ThinItalic.ttf */; };
+		24A9A9421FEA635A0034EDA8 /* ToDoListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9A9411FEA635A0034EDA8 /* ToDoListExtension.swift */; };
 		24C204AB1FCD329A00878318 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C204AA1FCD329A00878318 /* ToDoViewModel.swift */; };
 		24E331201FC3D340004BC27F /* TaskListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */; };
 		46512FD61FE6D3C000A99A55 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46512FD51FE6D3C000A99A55 /* Date+Extensions.swift */; };
@@ -74,6 +75,7 @@
 		247A75541FCC0F460039B709 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		247A75551FCC0F460039B709 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		247A75561FCC0F470039B709 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		24A9A9411FEA635A0034EDA8 /* ToDoListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListExtension.swift; sourceTree = "<group>"; };
 		24C204AA1FCD329A00878318 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
 		24E3311F1FC3D340004BC27F /* TaskListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewDataSource.swift; sourceTree = "<group>"; };
 		46512FD51FE6D3C000A99A55 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		468218E11FC32CC4008F9EFF /* SwiftTraning */ = {
 			isa = PBXGroup;
 			children = (
+				24A9A9411FEA635A0034EDA8 /* ToDoListExtension.swift */,
 				46F13B071FD1968B005792A2 /* ToDoList */,
 				247A754A1FCC0F340039B709 /* Fonts */,
 				24E331231FC42591004BC27F /* View Controllers */,
@@ -371,6 +374,7 @@
 				468218EB1FC32CC4008F9EFF /* SwiftTraning.xcdatamodeld in Sources */,
 				24724CF11FC671670038222D /* ToDoListViewController.swift in Sources */,
 				24655C521FC820EE00F3F757 /* AddNewTaskViewController.swift in Sources */,
+				24A9A9421FEA635A0034EDA8 /* ToDoListExtension.swift in Sources */,
 				468218E31FC32CC4008F9EFF /* AppDelegate.swift in Sources */,
 				46FDAAA51FE804EC00E9B88E /* TimePickerViewController.swift in Sources */,
 			);
