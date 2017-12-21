@@ -80,7 +80,7 @@ class ToDoListViewController: UIViewController{
     private func swingAnimation() -> CABasicAnimation {
     
         let animation = CABasicAnimation.init(keyPath: "transform.rotation.z")
-        animation.duration      = 0.15
+        animation.duration      = 0.13
         animation.repeatCount   = 2
         animation.autoreverses  = true
         animation.fromValue     = NSNumber.init(value:0)
